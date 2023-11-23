@@ -51,5 +51,40 @@ document.addEventListener('DOMContentLoaded', function () {
         introTextElement.scrollIntoView({ behavior: 'smooth' });
     });
 
-
 });
+
+function openCart() {
+    document.querySelector('.shopping-cart-container').style.right = '0';
+}
+
+function closeCart() {
+    document.querySelector('.shopping-cart-container').style.right = '-300px';
+}
+
+function addToCart(productTitle, productPrice) {
+    // Create a new div for the cart item
+    var cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
+
+    // Set the content of the cart item
+    cartItem.innerHTML = `
+        <div class="cart-item-details">
+            <span class="cart-item-title">${productTitle}</span>
+            <span class="cart-item-price">${productPrice}</span>
+        </div>
+        <button class="remove-from-cart-btn" onclick="removeFromCart(this)">Retirer</button>
+    `;
+
+    // Append the cart item to the cart content
+    document.querySelector('.cart-content').appendChild(cartItem);
+
+    // Close the cart after adding an item (you can modify this behavior)
+    closeCart();
+}
+
+// Function to remove a product from the shopping cart
+function removeFromCart(btn) {
+    // Remove the parent cart item when the "Remove" button is clicked
+    var cartItem = btn.parentNode;
+    cartItem.parentNode.removeChild(cartItem);
+}

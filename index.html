@@ -29,6 +29,7 @@
         <div class="nav-link">
             <ul>
                 <li><a href="index.html">Acceuil</a></li>
+                <li><a onclick="openCart()">Panier</a></li>
             </ul>
         </div>
         <div class="cta-btn">
@@ -88,17 +89,17 @@
                 <img src="img/116817160_3005656549556856_442040296356982622_n.jpg" alt="Product Image">
             </div>
             <div class="product-details">
-                <div class="product-title">Miam</div>
-                <div class="product-price">3€50</div>
+                <div class="product-title">Sweet Triple</div>
+                <div class="product-price">3€70</div>
                 <div class="product-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
-                    vehicula.
+                    Ronde et onctueuse grâce au lactose et au moelleux, sa sucrosité fait ressortir des notes de fruits
+                    confits. Puissante, idéale sur du fromage ou foie gras. Laissez vous dériver par ses 8 degrés.
                 </div>
                 <div class="quantity-selector">
                     <label for="quantity">Quantité:</label>
                     <input type="number" id="quantity" name="quantity" min="1" value="1">
                 </div>
-                <button class="add-to-cart-btn">Ajouter au panier</button>
+                <button class="add-to-cart-btn" onclick="addToCart('Sweet Triple', '3€70')">Ajouter au panier</button>
             </div>
         </div>
 
@@ -107,17 +108,17 @@
                 <img src="img/117226102_3022353724553805_1742257219163138405_n.jpg" alt="Product Image">
             </div>
             <div class="product-details">
-                <div class="product-title">Miam2</div>
-                <div class="product-price">3€50 aussi</div>
+                <div class="product-title">Original</div>
+                <div class="product-price">3€70</div>
                 <div class="product-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
-                    vehicula.
+                    Désaltérante, elle met l’accent sur les levures et le Malt, parfaite au quotidien ou avec des plats
+                    épicé. Enfin une bière de soif qui a de la longueur en bouche.
                 </div>
                 <div class="quantity-selector">
                     <label for="quantity">Quantité:</label>
                     <input type="number" id="quantity" name="quantity" min="1" value="1">
                 </div>
-                <button class="add-to-cart-btn">Ajouter au panier</button>
+                <button class="add-to-cart-btn" onclick="addToCart('Original', '3€70')">Ajouter au panier</button>
             </div>
 
         </div>
@@ -127,32 +128,48 @@
                 <img src="img/117372440_3016785768443934_7927906176256052807_n.jpg" alt="Product Image">
             </div>
             <div class="product-details">
-                <div class="product-title">Miam3</div>
-                <div class="product-price">3€50 encore</div>
+                <div class="product-title">Dry ipa</div>
+                <div class="product-price">3€70</div>
                 <div class="product-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
-                    vehicula.
+                    Sèche et florale, le houblon est à l’honneur. Notes de fruits blancs, avec une subtile acidité du
+                    Sauvignon blanc, elle est la nouvelle star de vos plateaux de fruits de mer.
                 </div>
                 <div class="quantity-selector">
                     <label for="quantity">Quantité:</label>
                     <input type="number" id="quantity" name="quantity" min="1" value="1">
                 </div>
-                <button class="add-to-cart-btn">Ajouter au panier</button>
+                <button class="add-to-cart-btn" onclick="addToCart('Dry ipa', '3€70')">Ajouter au panier</button>
             </div>
 
         </div>
 
         <div class="product-container">
             <div class="product-image">
-                <img id="blurred" src="img/117226102_3022353724553805_1742257219163138405_n.jpg" alt="Product Image">
+                <img src="img/P1154428-2.jpeg" alt="Product Image">
             </div>
             <div class="product-details">
-                <div class="product-title">Prochainement</div>
-                <div class="product-price">A définir</div>
+                <div class="product-title">Pack de 6</div>
+                <div class="product-price">19€90</div>
                 <div class="product-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
-                    vehicula.
+                    3 saveurs différentes, pour une dégustation étonnante. Retrouvez le savoir-faire du bassin dans le
+                    pack « La Dérive » pour un apéritif 100% Bassin.
                 </div>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantité:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Pack de 6', '19€90')">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="shopping-cart-container">
+            <div class="cart-header">
+                <h3>Panier</h3>
+                <button class="close-cart-btn" onclick="closeCart()">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="cart-content">
             </div>
         </div>
 
