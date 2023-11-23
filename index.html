@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waveprojection</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src="js/logic.js"></script>
+
+</head>
+
+<body>
+    <div id="age-banner" class="age-banner">
+        <div class="age-content">
+            <h2>Êtes-vous âgé de 18 ans ou plus?</h2>
+            <button id="confirm-age">Oui</button>
+            <button id="confirm-agen">Non</button>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <span class="l-initial">La</span>Dérive
+            </a>
+        </div>
+        <div class="nav-link">
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+            </ul>
+        </div>
+        <div class="cta-btn">
+            <button class="btn s-btn"><a href="">Connection</a></button>
+            <button class="btn p-btn" style="color:rgb(251, 251, 251);"><a href="">S'enregister</a></button>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <div class="left-image">
+            <img src="img/sable.jpg" alt="Left Image" class="left-image">
+            <div class="text-overlay">
+                <h2>
+                    Embarquez pour une aventure gustative unique avec La Dérive, la bière artisanale du Bassin
+                    d'Arcachon <br>
+                    <button class="btn s-btn" id="scrollToIntro">Notre Histoire</button>
+                    <button class="btn s-btn"><a href="">Nos produits</a></button>
+                </h2>
+            </div>
+        </div>
+        <div class="right-image">
+            <img src="img/P1154428-2.jpeg" alt="Right Image" class="right-image">
+        </div>
+    </div>
+    <p id="intro-text">
+        Ne laissant rien au hasard, tout chez Lucien est une affaire de patience, de raisonnement, de maturité où
+        sans
+        précipitation il faut savoir s’écouter sans voir au-dessus de ses limites. <br> <span id="more-text">A l’inverse
+            d’autres brasseries, il a
+            su jouer la carte de la modestie, réfutant le modèle industriel pour remettre au goût du jour des
+            méthodes
+            de
+            brassage anciennes, oubliées, grâce à des techniques marginalisées et des valeurs ancestrales glanées au
+            fil
+            de
+            ses rencontres. Dans son atelier, où les murs infusés au feu de bois, laissent transpirer des effluves
+            de
+            fleurs
+            et d’amertume, chaque objet à un sens, une fonction qui prônent un retour logique à la simplicité des
+            choses.
+        </span>
+    </p>
+    <img id="centered-image" src="img/fleche.png" alt="Image de déclenchement" width="50px" height="50px"><br>
+    <div class="titre2">
+        <h2>Nos Bières</h2><br>
+        <p>Découvrez nos bières conçues sur le bassin d'arcachon !</p><br>
+    </div>
+
+    <div class="description">
+        <p>Découvrez « La Dérive » la bière du bassin artisanale par excellence : 100% fait main, élevée sur coquilles
+            d’huîtres du bassin et vieillie en barrique de Saint-Émilion.</p>
+    </div>
+    <div class="product-container-wrapper">
+
+        <div class="product-container">
+            <div class="product-image">
+                <img src="img/116817160_3005656549556856_442040296356982622_n.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Miam</div>
+                <div class="product-price">3€50</div>
+                <div class="product-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
+                    vehicula.
+                </div>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantité:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <button class="add-to-cart-btn">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="product-container">
+            <div class="product-image">
+                <img src="img/117226102_3022353724553805_1742257219163138405_n.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Miam2</div>
+                <div class="product-price">3€50 aussi</div>
+                <div class="product-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
+                    vehicula.
+                </div>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantité:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <button class="add-to-cart-btn">Ajouter au panier</button>
+            </div>
+
+        </div>
+
+        <div class="product-container">
+            <div class="product-image">
+                <img src="img/117372440_3016785768443934_7927906176256052807_n.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Miam3</div>
+                <div class="product-price">3€50 encore</div>
+                <div class="product-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
+                    vehicula.
+                </div>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantité:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <button class="add-to-cart-btn">Ajouter au panier</button>
+            </div>
+
+        </div>
+
+        <div class="product-container">
+            <div class="product-image">
+                <img id="blurred" src="img/117226102_3022353724553805_1742257219163138405_n.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Prochainement</div>
+                <div class="product-price">A définir</div>
+                <div class="product-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula eget eros venenatis
+                    vehicula.
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
