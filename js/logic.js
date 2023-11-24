@@ -79,7 +79,7 @@ function addToCart(productTitle, productPrice) {
     document.querySelector('.cart-content').appendChild(cartItem);
 
     // Close the cart after adding an item (you can modify this behavior)
-    closeCart();
+    openCart();
 }
 
 // Function to remove a product from the shopping cart
