@@ -55,36 +55,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function openCart() {
     document.querySelector('.shopping-cart-container').style.right = '0';
+    // Update the total when the cart is opened
+    updateTotal();
 }
 
 function closeCart() {
     document.querySelector('.shopping-cart-container').style.right = '-300px';
 }
 
-function addToCart(productTitle, productPrice) {
-    // Create a new div for the cart item
+function addToCart(productTitle, productPrice, productImage) {
     var cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
 
-    // Set the content of the cart item
     cartItem.innerHTML = `
         <div class="cart-item-details">
+            <span class="cart-item-image"><img src="${productImage}"></span>
             <span class="cart-item-title">${productTitle}</span>
-            <span class="cart-item-price">${productPrice}</span>
+            <span class="cart-item-price">${productPrice}€</span>
         </div>
         <button class="remove-from-cart-btn" onclick="removeFromCart(this)">Retirer</button>
     `;
 
-    // Append the cart item to the cart content
     document.querySelector('.cart-content').appendChild(cartItem);
 
-    // Close the cart after adding an item (you can modify this behavior)
+    // Update the total after adding an item
+    updateTotal();
     openCart();
 }
 
-// Function to remove a product from the shopping cart
 function removeFromCart(btn) {
-    // Remove the parent cart item when the "Remove" button is clicked
     var cartItem = btn.parentNode;
     cartItem.parentNode.removeChild(cartItem);
+
+    // Update the total after removing an item
+    updateTotal();
+}
+
+function updateTotal() {
+    var total = 0;
+    var cartItems = document.querySelectorAll('.cart-item');
+
+    cartItems.forEach(function (cartItem) {
+        var priceElement = cartItem.querySelector('.cart-item-price');
+        // Replace commas and periods with an empty string before parsing the price
+        var price = parseFloat(priceElement.innerText.replace(/,|\./g, ''));
+        total += price;
+    });
+
+    document.getElementById('totalAmount').innerText = (total / 100).toFixed(2) + '€';
+}
+
+function checkout() {
+    // Add your checkout logic here
+    alert('Checkout clicked!');
 }
