@@ -218,6 +218,10 @@ text-decoration: none;
   color: var(--text-black);
 }
 
+#scrollToProducts {
+  color: var(--text-black);
+}
+
 .titre2 h2 {
   text-align: center;
 }
@@ -387,4 +391,9 @@ text-decoration: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+}
+
+.selected-quantity {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
