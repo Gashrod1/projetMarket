@@ -181,3 +181,21 @@ function checkout() {
     // Add your checkout logic here
     alert('Checkout clicked!');
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Sélectionnez tous les éléments avec la classe scroll-to-products
+    var scrollButtons = document.querySelectorAll('.scroll-to-products');
+
+    // Ajoutez un gestionnaire d'événements à chacun
+    scrollButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault(); // Empêchez le comportement de lien par défaut
+
+            // Obtenez l'élément avec l'id "products" (la section que vous souhaitez faire défiler)
+            var productsElement = document.getElementById('products');
+
+            // Faites défiler jusqu'à l'élément products avec une animation fluide
+            productsElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
