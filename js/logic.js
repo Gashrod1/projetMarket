@@ -18,12 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var moreText = document.getElementById('more-text');
 
         // Vérifier si la propriété filter n'est pas définie ou est égale à 'blur(3px)'
-        if (!moreText.style.filter || moreText.style.filter === 'blur(3px)') {
-            moreText.style.transition = 'filter 0.3s ease'; // Ajouter une transition
-            moreText.style.filter = 'blur(0px)';
+        if (!moreText.style.visibility || moreText.style.visibility === 'hidden') {
+            moreText.style.visibility = 'visible';
         } else {
-            moreText.style.transition = 'filter 0.3s ease'; // Ajouter une transition
-            moreText.style.filter = 'blur(3px)';
+            moreText.style.visibility = 'hidden';
         }
     }
 
