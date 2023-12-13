@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Checkout</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <span class="l-initial">La</span>Dérive
+                </a>
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a onclick="openCart()">Panier</a></li>
+                </ul>
+            </div>
+            <div class="cta-btn">
+                <button class="btn s-btn"><a href="">Connection</a></button>
+                <button class="btn p-btn" style="color:rgb(251, 251, 251);"><a href="">S'enregister</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="order-summary">
+        <!-- L'ordre des produits sera affiché ici -->
+    </section>
+
+    <section id="payment-methods">
+        <h2>Choose Payment Method</h2>
+        <div id="stripe-logo">Stripe Logo</div>
+        <div id="paypal-logo">PayPal Logo</div>
+    </section>
+
+    <section id="total-amount">
+        <h2>Total Amount</h2>
+        <p id="checkout-total">0.00€</p>
+        <button onclick="processPayment()">Process Payment</button>
+    </section>
+
+    <footer>
+        <p>© 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+
+</html>
