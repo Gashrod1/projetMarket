@@ -188,11 +188,15 @@ function updateTotal() {
 }
 
 function checkout() {
-    var cartProducts = getCartProducts();
+    // Récupérer les données du panier
+    var cartItems = getCartItems();
+    var totalAmount = getTotalAmount();
 
-    // Ajoutez ici la logique pour afficher les produits sur la page de checkout
+    // Construire l'URL avec les données du panier
+    var checkoutURL = 'checkout.html?items=' + encodeURIComponent(JSON.stringify(cartItems)) + '&total=' + totalAmount;
 
-    window.location.href = 'checkout.html';
+    // Redirige vers checkout.html avec les données du panier
+    window.location.href = checkoutURL;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -276,4 +280,28 @@ function processPayment() {
     localStorage.removeItem('cartProducts');
     // Redirigez l'utilisateur vers la page de confirmation, etc.
     window.location.href = 'confirmation.html';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Récupérer les paramètres de l'URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var items = urlParams.get('items');
+    var total = urlParams.get('total');
+
+    // Convertir la chaîne JSON en objet JavaScript
+    var cartItems = JSON.parse(decodeURIComponent(items));
+
+    // Afficher les données sur la page
+    displayCartItems(cartItems);
+    displayTotal(total);
+});
+
+function displayCartItems(cartItems) {
+    // Affichez les éléments du panier sur la page (ajustez selon votre structure HTML)
+    // Vous pouvez itérer sur cartItems et créer des éléments HTML pour chaque produit.
+}
+
+function displayTotal(total) {
+    // Afficher le total sur la page (ajustez selon votre structure HTML)
+    // Vous pouvez insérer le total dans un élément HTML approprié.
 }

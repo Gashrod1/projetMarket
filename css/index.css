@@ -19,6 +19,48 @@
     box-sizing: border-box;
   }
 
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .navbar {
+        padding: 0 2rem;
+    }
+
+    .logo a {
+        font-size: large;
+    }
+
+    .nav-link ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link ul li {
+        margin: 0;
+        margin-top: 0.75rem;
+        padding-bottom: 0.5rem;
+        line-height: initial;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    .image-container {
+        margin: 10px;
+    }
+
+    .left-image,
+    .right-image {
+        max-height: 300px;
+    }
+
+    .text-overlay {
+        width: 80%;
+    }
+
+    .product-container {
+        max-width: 100%;
+    }
+}
+
 html{
 height: 100%;
 font-family: 'Montserrat', sans-serif;
@@ -461,4 +503,6 @@ text-decoration: none;
 .footer-buttons button:hover {
   filter: saturate(0.7);
 }
+
+
 
